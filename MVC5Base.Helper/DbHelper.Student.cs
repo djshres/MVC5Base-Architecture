@@ -73,6 +73,25 @@ namespace MVC5Base.Helper
             }
             catch (Exception ex)
             {
+                Console.WriteLine((ex));
+                return false;
+            }
+        }
+        public bool DeleteStudent(int id)
+        {
+            var userRepo = new Repository<Student>(_context);
+
+            var objClient = userRepo.FindById(id);
+
+            try
+            {
+                userRepo.Remove(objClient, true);
+                return true;
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine((ex));
                 return false;
             }
         }

@@ -59,7 +59,7 @@
                         <td>@item.Email</td>
                         <td class="text-right">
                             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "delete" })
+                            @Html.ActionLink("Delete", "Delete","Student", new { id = item.Id }, new { @class = "delete" })
                         </td>
                     </tr>
                 }

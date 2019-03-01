@@ -53,7 +53,7 @@ namespace MVC5Base.Web.Areas.Admin.Controllers
 
         public ActionResult Edit(int id)
         {
-            var model = _dbHelper.GetStudentById(id); //MvcApplication.Students.FirstOrDefault(x => x.Id == id);
+            var model = _dbHelper.GetStudentById(id);
 
             if (model == null)
                 return RedirectToAction("Index");
@@ -67,24 +67,29 @@ namespace MVC5Base.Web.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                model.ErrorMessage = "Enter all the required fields in corrent format.";
+                model.ErrorMessage = "Enter all the required fields in correct format.";
                 return View(model);
             }
 
             if (_dbHelper.EditStudent(model.Id, model.Name, model.Address, model.Age, model.Email))
                 return RedirectToAction("Index");
 
-            model.ErrorMessage = "Failed to update stuent record.";
+            model.ErrorMessage = "Failed to update student record.";
             return View(model);
         }
 
+        //[ValidateAntiForgeryToken]
+        //[HttpPost]
         //public ActionResult Delete(int id)
         //{
-        //    //var objStudent = MvcApplication.Students.FirstOrDefault(x => x.Id == id);
-        //    //if (objStudent == null)
-        //    //    return RedirectToAction("Index");
+        //    if (id == 0)
+        //    {
+        //        return RedirectToAction("Index");
+        //    }
 
-        //    //MvcApplication.Students.Remove(objStudent);
+
+        //    _dbHelper.DeleteStudent(id);
+
 
         //    return RedirectToAction("Index");
         //}

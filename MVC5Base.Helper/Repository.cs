@@ -66,14 +66,24 @@ namespace MVC5Base.Helper
 
         public T Update(T item, int id, bool saveChanges = true)
         {
-            if (item == null) return null;
+            if (item == null)
+            {
+                return null;
+            }
 
-            var existing = _dataContext.Set<T>().AsNoTracking().FirstOrDefault(x => x.Id == id);
-            if (existing == null) return null;
+            var existing = _dataContext.Set<T>().FirstOrDefault(x => x.Id == id);
+            if (existing == null)
+            {
+                return null;
+            }
 
             _dataContext.Entry(existing).CurrentValues.SetValues(item);
+            _dataContext.Entry(existing).State = EntityState.Modified;
 
-            if (saveChanges) _dataContext.SaveChanges();
+            if (saveChanges)
+            {
+                _dataContext.SaveChanges();
+            }
 
             return existing;
         }
@@ -86,6 +96,7 @@ namespace MVC5Base.Helper
             if (existing == null) return null;
 
             _dataContext.Entry(existing).CurrentValues.SetValues(item);
+            _dataContext.Entry(existing).State = EntityState.Modified;
 
             if (saveChanges) await _dataContext.SaveChangesAsync();
 

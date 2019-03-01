@@ -58,6 +58,6 @@ namespace MVC5Base.Web.Areas.Students.Controllers
         {
             _dbHelper.Dispose();
             base.Dispose(disposing);
-        }
+            }
     }
 }
