@@ -1,0 +1,1490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10F2BC7F-AD4C-410F-8C23-F6A140F4A8D3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MVC5Base.Web</RootNamespace>
+    <AssemblyName>MVC5Base.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
+    <Compile Include="Areas\Students\BaseController.cs" />
+    <Compile Include="Areas\Students\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Students\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Students\StudentsAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AuthenticationHelper.cs" />
+    <Compile Include="Models\AuthorizeAdmin.cs" />
+    <Compile Include="Models\AuthorizeStudent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\lib\adminlte\css\AdminLTE.css" />
+    <Content Include="assets\lib\adminlte\css\AdminLTE.min.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-bootstrap-social.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-bootstrap-social.min.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-fullcalendar.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-fullcalendar.min.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-select2.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-select2.min.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-without-plugins.css" />
+    <Content Include="assets\lib\adminlte\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-black-light.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-black-light.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-black.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-black.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-blue-light.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-blue-light.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-blue.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-blue.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-green-light.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-green-light.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-green.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-green.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-purple-light.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-purple-light.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-purple.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-purple.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-red-light.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-red-light.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-red.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-red.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-yellow-light.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-yellow-light.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-yellow.css" />
+    <Content Include="assets\lib\adminlte\css\skins\skin-yellow.min.css" />
+    <Content Include="assets\lib\adminlte\css\skins\_all-skins.css" />
+    <Content Include="assets\lib\adminlte\css\skins\_all-skins.min.css" />
+    <Content Include="assets\lib\adminlte\img\avatar.png" />
+    <Content Include="assets\lib\adminlte\img\avatar04.png" />
+    <Content Include="assets\lib\adminlte\img\avatar2.png" />
+    <Content Include="assets\lib\adminlte\img\avatar3.png" />
+    <Content Include="assets\lib\adminlte\img\avatar5.png" />
+    <Content Include="assets\lib\adminlte\img\credit\american-express.png" />
+    <Content Include="assets\lib\adminlte\img\credit\cirrus.png" />
+    <Content Include="assets\lib\adminlte\img\credit\mastercard.png" />
+    <Content Include="assets\lib\adminlte\img\credit\mestro.png" />
+    <Content Include="assets\lib\adminlte\img\credit\paypal.png" />
+    <Content Include="assets\lib\adminlte\img\credit\paypal2.png" />
+    <Content Include="assets\lib\adminlte\img\credit\visa.png" />
+    <Content Include="assets\lib\adminlte\js\adminlte.js" />
+    <Content Include="assets\lib\adminlte\js\adminlte.min.js" />
+    <Content Include="assets\lib\adminlte\plugins\bootstrap-slider\bootstrap-slider.js" />
+    <Content Include="assets\lib\adminlte\plugins\bootstrap-slider\slider.css" />
+    <Content Include="assets\lib\adminlte\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js" />
+    <Content Include="assets\lib\adminlte\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
+    <Content Include="assets\lib\adminlte\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
+    <Content Include="assets\lib\adminlte\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\all.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\aero%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\aero.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\aero.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\blue%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\blue.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\blue.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\flat%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\flat.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\flat.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\green%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\green.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\green.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\grey%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\grey.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\grey.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\orange%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\orange.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\orange.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\pink%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\pink.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\pink.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\purple%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\purple.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\purple.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\red%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\red.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\red.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\yellow%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\yellow.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\yellow.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\flat\_all.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\futurico\futurico%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\futurico\futurico.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\futurico\futurico.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\icheck.js" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\icheck.min.js" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\aero.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\blue.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\green.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\grey.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\line%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\line.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\line.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\orange.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\pink.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\purple.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\red.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\yellow.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\line\_all.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\aero%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\aero.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\aero.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\blue%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\blue.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\blue.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\green%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\green.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\green.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\grey%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\grey.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\grey.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\minimal%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\minimal.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\minimal.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\orange%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\orange.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\orange.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\pink%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\pink.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\pink.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\purple%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\purple.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\purple.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\red%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\red.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\red.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\yellow%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\yellow.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\yellow.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\minimal\_all.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\polaris\polaris%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\polaris\polaris.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\polaris\polaris.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\aero%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\aero.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\aero.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\blue%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\blue.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\blue.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\green%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\green.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\green.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\grey%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\grey.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\grey.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\orange%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\orange.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\orange.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\pink%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\pink.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\pink.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\purple%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\purple.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\purple.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\red%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\red.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\red.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\square%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\square.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\square.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\yellow%402x.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\yellow.css" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\yellow.png" />
+    <Content Include="assets\lib\adminlte\plugins\iCheck\square\_all.css" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\jquery.inputmask.date.extensions.js" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\jquery.inputmask.extensions.js" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\jquery.inputmask.js" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\jquery.inputmask.phone.extensions.js" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\jquery.inputmask.regex.extensions.js" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\phone-codes\readme.txt" />
+    <Content Include="assets\lib\adminlte\plugins\jQueryUI\jquery-ui.js" />
+    <Content Include="assets\lib\adminlte\plugins\jQueryUI\jquery-ui.min.js" />
+    <Content Include="assets\lib\adminlte\plugins\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="assets\lib\adminlte\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="assets\lib\adminlte\plugins\jvectormap\jquery-jvectormap-usa-en.js" />
+    <Content Include="assets\lib\adminlte\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="assets\lib\adminlte\plugins\pace\pace.css" />
+    <Content Include="assets\lib\adminlte\plugins\pace\pace.js" />
+    <Content Include="assets\lib\adminlte\plugins\pace\pace.min.css" />
+    <Content Include="assets\lib\adminlte\plugins\pace\pace.min.js" />
+    <Content Include="assets\lib\adminlte\plugins\timepicker\bootstrap-timepicker.css" />
+    <Content Include="assets\lib\adminlte\plugins\timepicker\bootstrap-timepicker.js" />
+    <Content Include="assets\lib\adminlte\plugins\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="assets\lib\adminlte\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker3.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="assets\lib\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker-en-CA.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ar-tn.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.bn.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.br.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.en-CA.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.en-IE.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.en-NZ.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.en-ZA.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.hi.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.km.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.oc.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.si.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.ta.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.tg.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.tk.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.uz-cyrl.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.uz-latn.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="assets\lib\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\lib\bootstrap\js\npm.js" />
+    <Content Include="assets\lib\datatables\css\dataTables.bootstrap.css" />
+    <Content Include="assets\lib\datatables\css\dataTables.bootstrap.min.css" />
+    <Content Include="assets\lib\datatables\js\dataTables.bootstrap.js" />
+    <Content Include="assets\lib\datatables\js\dataTables.bootstrap.min.js" />
+    <Content Include="assets\lib\datatables\js\jquery.dataTables.js" />
+    <Content Include="assets\lib\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="assets\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\lib\iCheck\icheck.js" />
+    <Content Include="assets\lib\iCheck\icheck.min.js" />
+    <Content Include="assets\lib\iCheck\skins\all.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\aero%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\aero.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\aero.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\blue%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\blue.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\blue.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\flat%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\flat.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\flat.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\green%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\green.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\green.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\grey%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\grey.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\grey.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\orange%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\orange.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\orange.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\pink%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\pink.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\pink.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\purple%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\purple.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\purple.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\red%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\red.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\red.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\yellow%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\yellow.css" />
+    <Content Include="assets\lib\iCheck\skins\flat\yellow.png" />
+    <Content Include="assets\lib\iCheck\skins\flat\_all.css" />
+    <Content Include="assets\lib\iCheck\skins\futurico\futurico%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\futurico\futurico.css" />
+    <Content Include="assets\lib\iCheck\skins\futurico\futurico.png" />
+    <Content Include="assets\lib\iCheck\skins\line\aero.css" />
+    <Content Include="assets\lib\iCheck\skins\line\blue.css" />
+    <Content Include="assets\lib\iCheck\skins\line\green.css" />
+    <Content Include="assets\lib\iCheck\skins\line\grey.css" />
+    <Content Include="assets\lib\iCheck\skins\line\line%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\line\line.css" />
+    <Content Include="assets\lib\iCheck\skins\line\line.png" />
+    <Content Include="assets\lib\iCheck\skins\line\orange.css" />
+    <Content Include="assets\lib\iCheck\skins\line\pink.css" />
+    <Content Include="assets\lib\iCheck\skins\line\purple.css" />
+    <Content Include="assets\lib\iCheck\skins\line\red.css" />
+    <Content Include="assets\lib\iCheck\skins\line\yellow.css" />
+    <Content Include="assets\lib\iCheck\skins\line\_all.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\aero%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\aero.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\aero.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\blue%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\blue.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\blue.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\green%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\green.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\green.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\grey%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\grey.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\grey.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\minimal%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\minimal.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\minimal.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\orange%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\orange.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\orange.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\pink%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\pink.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\pink.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\purple%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\purple.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\purple.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\red%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\red.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\red.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\yellow%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\yellow.css" />
+    <Content Include="assets\lib\iCheck\skins\minimal\yellow.png" />
+    <Content Include="assets\lib\iCheck\skins\minimal\_all.css" />
+    <Content Include="assets\lib\iCheck\skins\polaris\polaris%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\polaris\polaris.css" />
+    <Content Include="assets\lib\iCheck\skins\polaris\polaris.png" />
+    <Content Include="assets\lib\iCheck\skins\square\aero%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\aero.css" />
+    <Content Include="assets\lib\iCheck\skins\square\aero.png" />
+    <Content Include="assets\lib\iCheck\skins\square\blue%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\blue.css" />
+    <Content Include="assets\lib\iCheck\skins\square\blue.png" />
+    <Content Include="assets\lib\iCheck\skins\square\green%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\green.css" />
+    <Content Include="assets\lib\iCheck\skins\square\green.png" />
+    <Content Include="assets\lib\iCheck\skins\square\grey%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\grey.css" />
+    <Content Include="assets\lib\iCheck\skins\square\grey.png" />
+    <Content Include="assets\lib\iCheck\skins\square\orange%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\orange.css" />
+    <Content Include="assets\lib\iCheck\skins\square\orange.png" />
+    <Content Include="assets\lib\iCheck\skins\square\pink%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\pink.css" />
+    <Content Include="assets\lib\iCheck\skins\square\pink.png" />
+    <Content Include="assets\lib\iCheck\skins\square\purple%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\purple.css" />
+    <Content Include="assets\lib\iCheck\skins\square\purple.png" />
+    <Content Include="assets\lib\iCheck\skins\square\red%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\red.css" />
+    <Content Include="assets\lib\iCheck\skins\square\red.png" />
+    <Content Include="assets\lib\iCheck\skins\square\square%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\square.css" />
+    <Content Include="assets\lib\iCheck\skins\square\square.png" />
+    <Content Include="assets\lib\iCheck\skins\square\yellow%402x.png" />
+    <Content Include="assets\lib\iCheck\skins\square\yellow.css" />
+    <Content Include="assets\lib\iCheck\skins\square\yellow.png" />
+    <Content Include="assets\lib\iCheck\skins\square\_all.css" />
+    <Content Include="assets\lib\jquery-loading\jquery.loading.min.css" />
+    <Content Include="assets\lib\jquery-loading\jquery.loading.min.js" />
+    <Content Include="assets\lib\jquery-ui\jquery-ui.js" />
+    <Content Include="assets\lib\jquery-ui\jquery-ui.min.js" />
+    <Content Include="assets\lib\jquery-ui\themes\base\accordion.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\all.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\autocomplete.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\base.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\button.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\core.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\datepicker.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\dialog.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\draggable.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\base\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\menu.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\progressbar.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\resizable.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\selectable.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\selectmenu.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\slider.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\sortable.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\spinner.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\tabs.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\base\tooltip.css" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_diagonals-thick_8_333333_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_glass_40_111111_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_glass_55_1c1c1c_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_highlight-hard_100_f9f9f9_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_highlight-hard_40_aaaaaa_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_highlight-soft_50_aaaaaa_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_inset-hard_45_cd0a0a_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-bg_inset-hard_55_ffeb80_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-icons_4ca300_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-icons_ededed_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-icons_ffcf29_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\black-tie\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\blitzer\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\cupertino\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\dark-hive\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_dots-small_20_333333_2x2.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_dots-small_30_a32d00_2x2.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_dots-small_40_00498f_2x2.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_flat_40_292929_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-bg_gloss-wave_20_111111_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-icons_00498f_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-icons_98d2fb_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-icons_9ccdfc_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\dot-luv\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-icons_734d99_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\eggplant\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_diagonals-small_25_c5ddfc_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_diagonals-thick_20_e69700_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_diagonals-thick_22_1484e6_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_diagonals-thick_26_2293f7_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_flat_0_e69700_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_flat_0_e6b900_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_highlight-soft_100_f9f9f9_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-bg_inset-hard_100_eeeeee_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-icons_0a82eb_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-icons_0b54d5_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-icons_5fa5e3_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-icons_fcdd4a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\excite-bike\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\flick\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_diagonals-small_40_db4865_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_diagonals-small_50_93c3cd_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_diagonals-small_50_ff3853_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_diagonals-small_75_ccd232_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_dots-medium_80_ffff38_4x4.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_dots-small_35_35414f_2x2.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_flat_75_ba9217_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-bg_white-lines_85_f7f7ba_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-icons_88a206_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-icons_c02669_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-icons_e1e463_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-icons_ffeb33_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\hot-sneaks\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-icons_f08000_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\humanity\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\le-frog\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_glass_15_5f391b_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_gloss-wave_20_1c160d_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_gloss-wave_25_453326_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_gloss-wave_30_44372c_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_highlight-soft_20_201913_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_highlight-soft_20_619226_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-bg_inset-soft_10_201913_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-icons_9bcc60_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-icons_add978_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-icons_e3ddc9_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-icons_f1fd86_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\mint-choc\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-icons_999999_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\overcast\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-icons_b83400_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\pepper-grinder\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\redmond\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\smoothness\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_highlight-hard_15_459e00_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_highlight-soft_25_67b021_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-icons_808080_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-icons_847e71_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-icons_8DC262_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\south-street\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\start\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\start\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\start\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-icons_d19405_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\sunny\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_diamond_10_4f4221_10x8.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_diamond_20_372806_10x8.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_diamond_25_675423_10x8.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_diamond_25_d5ac5d_10x8.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_diamond_8_261803_10x8.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_diamond_8_443113_10x8.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_flat_75_ddd4b0_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-icons_070603_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-icons_e8e2b5_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-icons_e9cd86_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-icons_efec9f_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-icons_f2ec64_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-icons_f9f2bd_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\swanky-purse\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_diagonals-small_50_262626_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_flat_0_303030_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_flat_0_4c4c4c_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_glass_40_0a0a0a_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_glass_55_f1fbe5_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_glass_60_000000_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_gloss-wave_55_000000_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_gloss-wave_85_9fda58_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-bg_gloss-wave_95_f6ecd5_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-icons_000000_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-icons_1f1f1f_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-icons_9fda58_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-icons_b8ec79_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\trontastic\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-darkness\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\ui-lightness\theme.css" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\animated-overlay.gif" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-icons_666666_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-icons_c98000_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\jquery-ui.css" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\jquery-ui.min.css" />
+    <Content Include="assets\lib\jquery-ui\themes\vader\theme.css" />
+    <Content Include="assets\lib\jquery-ui\ui\accordion.js" />
+    <Content Include="assets\lib\jquery-ui\ui\autocomplete.js" />
+    <Content Include="assets\lib\jquery-ui\ui\button.js" />
+    <Content Include="assets\lib\jquery-ui\ui\core.js" />
+    <Content Include="assets\lib\jquery-ui\ui\datepicker.js" />
+    <Content Include="assets\lib\jquery-ui\ui\dialog.js" />
+    <Content Include="assets\lib\jquery-ui\ui\draggable.js" />
+    <Content Include="assets\lib\jquery-ui\ui\droppable.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-blind.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-bounce.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-clip.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-drop.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-explode.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-fade.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-fold.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-highlight.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-puff.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-pulsate.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-scale.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-shake.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-size.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-slide.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect-transfer.js" />
+    <Content Include="assets\lib\jquery-ui\ui\effect.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-af.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ar-DZ.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ar.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-az.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-be.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-bg.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-bs.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ca.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-cs.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-cy-GB.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-da.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-de.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-el.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-en-AU.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-en-GB.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-en-NZ.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-eo.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-es.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-et.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-eu.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-fa.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-fi.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-fo.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-fr-CA.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-fr-CH.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-fr.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-gl.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-he.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-hi.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-hr.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-hu.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-hy.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-id.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-is.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-it-CH.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-it.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ja.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ka.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-kk.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-km.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ko.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ky.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-lb.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-lt.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-lv.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-mk.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ml.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ms.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-nb.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-nl-BE.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-nl.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-nn.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-no.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-pl.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-pt-BR.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-pt.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-rm.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ro.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ru.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-sk.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-sl.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-sq.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-sr-SR.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-sr.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-sv.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-ta.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-th.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-tj.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-tr.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-uk.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-vi.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-zh-CN.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-zh-HK.js" />
+    <Content Include="assets\lib\jquery-ui\ui\i18n\datepicker-zh-TW.js" />
+    <Content Include="assets\lib\jquery-ui\ui\menu.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\accordion.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\autocomplete.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\button.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\core.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\datepicker.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\dialog.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\draggable.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\droppable.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-blind.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-bounce.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-clip.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-drop.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-explode.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-fade.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-fold.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-highlight.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-puff.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-pulsate.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-scale.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-shake.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-size.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-slide.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect-transfer.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\effect.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-af.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ar-DZ.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ar.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-az.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-be.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-bg.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-bs.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ca.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-cs.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-cy-GB.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-da.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-de.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-el.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-en-AU.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-en-GB.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-en-NZ.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-eo.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-es.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-et.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-eu.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-fa.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-fi.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-fo.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-fr-CA.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-fr-CH.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-fr.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-gl.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-he.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-hi.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-hr.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-hu.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-hy.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-id.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-is.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-it-CH.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-it.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ja.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ka.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-kk.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-km.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ko.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ky.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-lb.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-lt.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-lv.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-mk.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ml.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ms.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-nb.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-nl-BE.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-nl.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-nn.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-no.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-pl.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-pt-BR.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-pt.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-rm.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ro.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ru.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-sk.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-sl.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-sq.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-sr-SR.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-sr.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-sv.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-ta.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-th.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-tj.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-tr.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-uk.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-vi.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-zh-CN.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-zh-HK.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\i18n\datepicker-zh-TW.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\menu.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\mouse.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\position.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\progressbar.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\resizable.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\selectable.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\selectmenu.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\slider.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\sortable.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\spinner.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\tabs.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\tooltip.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\minified\widget.min.js" />
+    <Content Include="assets\lib\jquery-ui\ui\mouse.js" />
+    <Content Include="assets\lib\jquery-ui\ui\position.js" />
+    <Content Include="assets\lib\jquery-ui\ui\progressbar.js" />
+    <Content Include="assets\lib\jquery-ui\ui\resizable.js" />
+    <Content Include="assets\lib\jquery-ui\ui\selectable.js" />
+    <Content Include="assets\lib\jquery-ui\ui\selectmenu.js" />
+    <Content Include="assets\lib\jquery-ui\ui\slider.js" />
+    <Content Include="assets\lib\jquery-ui\ui\sortable.js" />
+    <Content Include="assets\lib\jquery-ui\ui\spinner.js" />
+    <Content Include="assets\lib\jquery-ui\ui\tabs.js" />
+    <Content Include="assets\lib\jquery-ui\ui\tooltip.js" />
+    <Content Include="assets\lib\jquery-ui\ui\widget.js" />
+    <Content Include="assets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="assets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="assets\lib\jquery-validation\additional-methods.js" />
+    <Content Include="assets\lib\jquery-validation\additional-methods.min.js" />
+    <Content Include="assets\lib\jquery-validation\jquery.validate.js" />
+    <Content Include="assets\lib\jquery-validation\jquery.validate.min.js" />
+    <Content Include="assets\lib\jquery\core.js" />
+    <Content Include="assets\lib\jquery\jquery.js" />
+    <Content Include="assets\lib\jquery\jquery.min.js" />
+    <Content Include="assets\lib\jquery\jquery.slim.js" />
+    <Content Include="assets\lib\jquery\jquery.slim.min.js" />
+    <Content Include="assets\lib\moment\locales.min.js" />
+    <Content Include="assets\lib\moment\moment.min.js" />
+    <Content Include="assets\lib\select2\css\select2.css" />
+    <Content Include="assets\lib\select2\css\select2.min.css" />
+    <Content Include="assets\lib\select2\js\i18n\af.js" />
+    <Content Include="assets\lib\select2\js\i18n\ar.js" />
+    <Content Include="assets\lib\select2\js\i18n\az.js" />
+    <Content Include="assets\lib\select2\js\i18n\bg.js" />
+    <Content Include="assets\lib\select2\js\i18n\bs.js" />
+    <Content Include="assets\lib\select2\js\i18n\ca.js" />
+    <Content Include="assets\lib\select2\js\i18n\cs.js" />
+    <Content Include="assets\lib\select2\js\i18n\da.js" />
+    <Content Include="assets\lib\select2\js\i18n\de.js" />
+    <Content Include="assets\lib\select2\js\i18n\dsb.js" />
+    <Content Include="assets\lib\select2\js\i18n\el.js" />
+    <Content Include="assets\lib\select2\js\i18n\en.js" />
+    <Content Include="assets\lib\select2\js\i18n\es.js" />
+    <Content Include="assets\lib\select2\js\i18n\et.js" />
+    <Content Include="assets\lib\select2\js\i18n\eu.js" />
+    <Content Include="assets\lib\select2\js\i18n\fa.js" />
+    <Content Include="assets\lib\select2\js\i18n\fi.js" />
+    <Content Include="assets\lib\select2\js\i18n\fr.js" />
+    <Content Include="assets\lib\select2\js\i18n\gl.js" />
+    <Content Include="assets\lib\select2\js\i18n\he.js" />
+    <Content Include="assets\lib\select2\js\i18n\hi.js" />
+    <Content Include="assets\lib\select2\js\i18n\hr.js" />
+    <Content Include="assets\lib\select2\js\i18n\hsb.js" />
+    <Content Include="assets\lib\select2\js\i18n\hu.js" />
+    <Content Include="assets\lib\select2\js\i18n\hy.js" />
+    <Content Include="assets\lib\select2\js\i18n\id.js" />
+    <Content Include="assets\lib\select2\js\i18n\is.js" />
+    <Content Include="assets\lib\select2\js\i18n\it.js" />
+    <Content Include="assets\lib\select2\js\i18n\ja.js" />
+    <Content Include="assets\lib\select2\js\i18n\km.js" />
+    <Content Include="assets\lib\select2\js\i18n\ko.js" />
+    <Content Include="assets\lib\select2\js\i18n\lt.js" />
+    <Content Include="assets\lib\select2\js\i18n\lv.js" />
+    <Content Include="assets\lib\select2\js\i18n\mk.js" />
+    <Content Include="assets\lib\select2\js\i18n\ms.js" />
+    <Content Include="assets\lib\select2\js\i18n\nb.js" />
+    <Content Include="assets\lib\select2\js\i18n\nl.js" />
+    <Content Include="assets\lib\select2\js\i18n\pl.js" />
+    <Content Include="assets\lib\select2\js\i18n\ps.js" />
+    <Content Include="assets\lib\select2\js\i18n\pt-BR.js" />
+    <Content Include="assets\lib\select2\js\i18n\pt.js" />
+    <Content Include="assets\lib\select2\js\i18n\ro.js" />
+    <Content Include="assets\lib\select2\js\i18n\ru.js" />
+    <Content Include="assets\lib\select2\js\i18n\sk.js" />
+    <Content Include="assets\lib\select2\js\i18n\sl.js" />
+    <Content Include="assets\lib\select2\js\i18n\sr-Cyrl.js" />
+    <Content Include="assets\lib\select2\js\i18n\sr.js" />
+    <Content Include="assets\lib\select2\js\i18n\sv.js" />
+    <Content Include="assets\lib\select2\js\i18n\th.js" />
+    <Content Include="assets\lib\select2\js\i18n\tr.js" />
+    <Content Include="assets\lib\select2\js\i18n\uk.js" />
+    <Content Include="assets\lib\select2\js\i18n\vi.js" />
+    <Content Include="assets\lib\select2\js\i18n\zh-CN.js" />
+    <Content Include="assets\lib\select2\js\i18n\zh-TW.js" />
+    <Content Include="assets\lib\select2\js\select2.full.js" />
+    <Content Include="assets\lib\select2\js\select2.full.min.js" />
+    <Content Include="assets\lib\select2\js\select2.js" />
+    <Content Include="assets\lib\select2\js\select2.min.js" />
+    <Content Include="assets\NumericInput.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Students\Views\web.config" />
+    <Content Include="assets\lib\adminlte\css\adminlte.css.map" />
+    <Content Include="assets\lib\adminlte\css\adminlte.min.css.map" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\phone-codes\phone-be.json" />
+    <Content Include="assets\lib\adminlte\plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker.css.map" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css.map" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker3.css.map" />
+    <Content Include="assets\lib\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\lib\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\lib\font-awesome\css\font-awesome.css.map" />
+    <Content Include="assets\lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\lib\jquery\jquery.min.map" />
+    <Content Include="assets\lib\jquery\jquery.slim.min.map" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Students\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Students\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Students\Views\Profile\Edit.cshtml" />
+    <Content Include="Areas\Students\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Students\Views\_ViewStart.cshtml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Students\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVC5Base.Helper\MVC5Base.Helper.csproj">
+      <Project>{371D59D7-4395-4AC2-AEA1-9D4F4E8B5AAE}</Project>
+      <Name>MVC5Base.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC5Base.ViewModels\MVC5Base.ViewModels.csproj">
+      <Project>{7F066F8E-2333-47C5-98EE-83C1DE928094}</Project>
+      <Name>MVC5Base.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49702</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49702/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

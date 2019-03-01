@@ -1,0 +1,45 @@
+﻿@model MVC5Base.ViewModels.StudentViewModel
+@{
+    ViewBag.Title = "Profile";
+}
+
+<nav class="navbar navbar-static-top top-menu" role="navigation">
+    <!-- Sidebar toggle button-->
+    <div class="navbar-custom-menu navbar-left">
+        <ul class="nav navbar-nav">
+            <li>
+                <p class="h3">My Profile</p>
+            </li>
+        </ul>
+    </div>
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu navbar-right">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="@Url.Action("Edit")">
+                    <i class="fa fa-list"></i>
+                    <span>Edit</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <div class="row">
+        <div class="col-md-2">Full Name</div>
+        <div class="col-md-10">@Model.Name</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Address</div>
+        <div class="col-md-10">@Model.Address</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Age</div>
+        <div class="col-md-10">@Model.Age</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Email</div>
+        <div class="col-md-10">@Model.Email</div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+﻿@model List<MVC5Base.ViewModels.StudentViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- DataTables -->
+<link rel="stylesheet" href="~/assets/lib/datatables/css/dataTables.bootstrap.min.css">
+<script src="~/assets/lib/datatables/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/lib/datatables/js/dataTables.bootstrap.min.js"></script>
+
+
+<style>
+    input[type=search] {
+        height: 30px;
+    }
+</style>
+
+<nav class="navbar navbar-static-top top-menu" role="navigation">
+    <!-- Sidebar toggle button-->
+    <div class="navbar-custom-menu navbar-left">
+        <ul class="nav navbar-nav">
+            <li>
+                <p class="h3">List of Students</p>
+            </li>
+        </ul>
+    </div>
+    <!-- Navbar Right Menu -->
+    <div class="navbar-custom-menu navbar-right">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="@Url.Action("Create")">
+                    <i class="fa fa-list"></i>
+                    <span>Add New</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-xs-12">
+        <table id="tableActive" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Address</td>
+                        <td>@item.Age</td>
+                        <td>@item.Email</td>
+                        <td class="text-right">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "delete" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#tableStuent').DataTable({
+            "paging": true,
+            "pageLength": 100,
+            "lengthMenu": [[25, 50, 100, 200, 500, -1], [25, 50, 100, 200, 500, "All"]],
+            "lengthChange": false,
+            "searching": true,
+            "ordering": false,
+            "info": false,
+            "autoWidth": false
+        });
+
+        $('a.delete').on('click', function (e) {
+            if (confirm("Do you want to delete this record?")) {
+
+            }
+            else {
+                e.preventDefault();
+            }
+        });
+    });
+</script>
