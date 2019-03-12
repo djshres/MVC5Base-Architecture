@@ -28,9 +28,9 @@ namespace MVC5Base.ViewModels
         [Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Confirm Password is required.")]
+        [Required(ErrorMessage = "Password should be confirmed.")]
         [Compare("Password", ErrorMessage = "Password and Confirm Password do match.")]
-        [Display(Name = "Confirm Email")]
+        [Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
     }
 }
